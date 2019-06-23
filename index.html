@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container">
+                <a class="navbar-brand" href="#"><b>Dummy Encoder</b></a>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div id="buttons-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-group" role="group">
+                        <button id="encode-button" class="btn btn-primary active" type="button">Encode</button>
+                        <button id="decode-button" class="btn btn-primary" type="button">Decode</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="text-area-block">
+        <div class="container">
+            <div class="row">
+                <div id="left-field-column" class="col-md-6">
+                    <textarea id="left-text-area" class="text-area" placeholder="Write a message"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <textarea id="right-text-area" class="text-area" readonly=""></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/encoder-decoder.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

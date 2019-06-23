@@ -1,2 +1,2 @@
 # Dummy Text Encoder
-![](https://github.com/duketemon/encoder/raw/master/resources/interface.png)
+![](https://github.com/duketemon/encoder/raw/master/resources/user-interface.png)

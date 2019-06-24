@@ -22,6 +22,15 @@ function changeTextAreasSize() {
 	rightTextArea.style.height = newHeight + 'px';
 };
 
+function resetSizeOfTextAreas() {
+	leftTextArea = document.getElementById('left-text-area');
+	rightTextArea = document.getElementById('right-text-area');
+	
+	height = "100px";
+	leftTextArea.style.height = height;
+	rightTextArea.style.height = height;
+};
+
 var oldVal = "";
 function processText(force_update=false) {
 	var currentVal = $("#left-text-area").val();
@@ -30,17 +39,23 @@ function processText(force_update=false) {
 	}	
 
 	oldVal = currentVal;
-	switch (currentOperation) {
-		case 'encode':
-			transformedText = encode(currentVal);
-			break;
-		case 'decode':
-			transformedText = decode(currentVal);
-			break;
-	};
+	transformedText = "";
+	if (currentVal) {
+		switch (currentOperation) {
+			case 'encode':
+				transformedText = encode(currentVal);
+				break;
+			case 'decode':
+				transformedText = decode(currentVal);
+				break;
+		};
 
+		changeTextAreasSize();
+	}
+	else{
+		resetSizeOfTextAreas();
+	}
 	$("#right-text-area").text(transformedText);
-	changeTextAreasSize();
 };
 
 
